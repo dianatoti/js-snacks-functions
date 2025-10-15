@@ -9,9 +9,26 @@ const name = 'Mario';
 
 
 // Dichiara la funzione qui.
-
+function saluto (name, oraFinta) {
+    const ora = oraFinta || new Date().getHours();
+    let message;
+if (ora < 13) {
+    message = "Buongiorno";
+} else if (ora < 17) {
+    message = "Buon pomeriggio";
+} else {
+    message = "Buonasera";
+}
+return message + " " + name;
+}
 
 // Invoca la funzione qui e stampa il risultato in console
+
+console.log(saluto(name));
+// test
+console.log(saluto(name, 9));
+console.log(saluto(name, 15));
+console.log(saluto(name, 18));
 
 
 
