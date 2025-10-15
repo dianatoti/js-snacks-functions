@@ -4,6 +4,19 @@ const word = 'javascript';
 
 
 // Dichiara la funzione qui.
+function vocali(stringa) {
+    let count = 0;
+    const arrayVocali = ["a", "e", "i", "o", "u"];
+    for (let i = 0; i < stringa.length; i++) {
+        let lettera = stringa[i];
+        if (arrayVocali.includes(lettera)) {
+            count++
+        }
+    }
+    return count;
+}
+console.log(vocali(word));
+
 
 
 // Invoca la funzione qui e stampa il risultato in console
